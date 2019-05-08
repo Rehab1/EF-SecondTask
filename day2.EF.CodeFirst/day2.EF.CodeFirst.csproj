@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8529A2E-CC35-464F-93BC-F671B2A2BE0E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>day2.EF.CodeFirst</RootNamespace>
+    <AssemblyName>day2.EF.CodeFirst</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201905070351469_initial.cs" />
+    <Compile Include="Migrations\201905070351469_initial.Designer.cs">
+      <DependentUpon>201905070351469_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905070413198_AddRelationsCityCountry.cs" />
+    <Compile Include="Migrations\201905070413198_AddRelationsCityCountry.Designer.cs">
+      <DependentUpon>201905070413198_AddRelationsCityCountry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905070417354_AddForignKeyToCity.cs" />
+    <Compile Include="Migrations\201905070417354_AddForignKeyToCity.Designer.cs">
+      <DependentUpon>201905070417354_AddForignKeyToCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905070423454_CreateUserTable.cs" />
+    <Compile Include="Migrations\201905070423454_CreateUserTable.Designer.cs">
+      <DependentUpon>201905070423454_CreateUserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905070426502_AddRelationUserCity.cs" />
+    <Compile Include="Migrations\201905070426502_AddRelationUserCity.Designer.cs">
+      <DependentUpon>201905070426502_AddRelationUserCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905070431377_RemoveRelationUserCity.cs" />
+    <Compile Include="Migrations\201905070431377_RemoveRelationUserCity.Designer.cs">
+      <DependentUpon>201905070431377_RemoveRelationUserCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905071828444_altertableCountery.cs" />
+    <Compile Include="Migrations\201905071828444_altertableCountery.Designer.cs">
+      <DependentUpon>201905071828444_altertableCountery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905071840342_altertableCity.cs" />
+    <Compile Include="Migrations\201905071840342_altertableCity.Designer.cs">
+      <DependentUpon>201905071840342_altertableCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905071844257_updateattrebutesUser.cs" />
+    <Compile Include="Migrations\201905071844257_updateattrebutesUser.Designer.cs">
+      <DependentUpon>201905071844257_updateattrebutesUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905081044110_uservistupdateu.cs" />
+    <Compile Include="Migrations\201905081044110_uservistupdateu.Designer.cs">
+      <DependentUpon>201905081044110_uservistupdateu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905081521049_userBook.cs" />
+    <Compile Include="Migrations\201905081521049_userBook.Designer.cs">
+      <DependentUpon>201905081521049_userBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelContext.cs" />
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserVist.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905070351469_initial.resx">
+      <DependentUpon>201905070351469_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905070413198_AddRelationsCityCountry.resx">
+      <DependentUpon>201905070413198_AddRelationsCityCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905070417354_AddForignKeyToCity.resx">
+      <DependentUpon>201905070417354_AddForignKeyToCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905070423454_CreateUserTable.resx">
+      <DependentUpon>201905070423454_CreateUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905070426502_AddRelationUserCity.resx">
+      <DependentUpon>201905070426502_AddRelationUserCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905070431377_RemoveRelationUserCity.resx">
+      <DependentUpon>201905070431377_RemoveRelationUserCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905071828444_altertableCountery.resx">
+      <DependentUpon>201905071828444_altertableCountery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905071840342_altertableCity.resx">
+      <DependentUpon>201905071840342_altertableCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905071844257_updateattrebutesUser.resx">
+      <DependentUpon>201905071844257_updateattrebutesUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905081044110_uservistupdateu.resx">
+      <DependentUpon>201905081044110_uservistupdateu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905081521049_userBook.resx">
+      <DependentUpon>201905081521049_userBook.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
